@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap"
+            rel="stylesheet"
+        />
+        <title>Accordion Component</title>
+
+        <style>
+            /*
+            SPACING SYSTEM (px)
+            2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 /          96 / 128
+
+            FONT SIZE SYSTEM (px)
+            10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 /            44 / 52 / 62 / 74 / 86 / 98
+            */
+
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            body {
+                font-family: "Inter", sans-serif;
+                background-color: #d8dee9;
+                color: #2e3440;
+                line-height: 1;
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-top: 200px;
+            }
+
+            .btn {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                cursor: pointer;
+                border: none;
+                background-color: none;
+                width: 48px;
+                height: 48px;
+                border-radius: 50%;
+                border: 1px solid #8fbcbb;
+                background-color: #d8dee9;
+            }
+
+            .btn .move--next,
+            .btn .move--back {
+                width: 24px;
+                height: 24px;
+            }
+
+            .btn:hover {
+                background-color: #8fbcbb;
+            }
+
+            .page-container {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 24px;
+            }
+
+            .page a:link,
+            .page a:visited,
+            .page a:hover,
+            .page a:active {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 40px;
+                height: 40px;
+                color: #2e3440;
+                text-decoration: none;
+            }
+            .page a:hover {
+                background-color: #8fbcbb;
+                border-radius: 50%;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="page-container">
+            <button class="btn">
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="move--next"
+                >
+                    <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M15.75 19.5L8.25 12l7.5-7.5"
+                    />
+                </svg>
+            </button>
+
+            <div class="page">
+                <a href="#">1</a>
+            </div>
+            <div class="page">
+                <a href="#">2</a>
+            </div>
+            <div class="page">
+                <a href="#">3</a>
+            </div>
+            <div class="page">
+                <a href="#">4</a>
+            </div>
+            <div class="page">
+                <a href="#">5</a>
+            </div>
+            <div class="page">
+                <a href="#">6</a>
+            </div>
+            <div class="page">
+                <span class="dots">...</span>
+            </div>
+            <div class="page">
+                <a href="#">23</a>
+            </div>
+
+            <button class="btn">
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="move--back"
+                >
+                    <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M8.25 4.5l7.5 7.5-7.5 7.5"
+                    />
+                </svg>
+            </button>
+        </div>
+    </body>
+</html>
